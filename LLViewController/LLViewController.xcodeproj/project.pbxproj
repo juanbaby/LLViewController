@@ -27,6 +27,10 @@
 		DB6C131D1F3AB757001088C4 /* ScienceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C131A1F3AB757001088C4 /* ScienceVC.m */; };
 		DB6C131E1F3AB757001088C4 /* ScienceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C131B1F3AB757001088C4 /* ScienceVC.xib */; };
 		DB6C131F1F3AB757001088C4 /* ScienceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C131B1F3AB757001088C4 /* ScienceVC.xib */; };
+		DB6C13231F3B19CE001088C4 /* AmuseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C13211F3B19CE001088C4 /* AmuseVC.m */; };
+		DB6C13241F3B19CE001088C4 /* AmuseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C13211F3B19CE001088C4 /* AmuseVC.m */; };
+		DB6C13251F3B19CE001088C4 /* AmuseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C13221F3B19CE001088C4 /* AmuseVC.xib */; };
+		DB6C13261F3B19CE001088C4 /* AmuseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C13221F3B19CE001088C4 /* AmuseVC.xib */; };
 		DBB70E8E1F39C67100E29426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB70E8D1F39C67100E29426 /* main.m */; };
 		DBB70E911F39C67100E29426 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB70E901F39C67100E29426 /* AppDelegate.m */; };
 		DBB70E971F39C67100E29426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB70E951F39C67100E29426 /* Main.storyboard */; };
@@ -73,6 +77,9 @@
 		DB6C13191F3AB757001088C4 /* ScienceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScienceVC.h; sourceTree = "<group>"; };
 		DB6C131A1F3AB757001088C4 /* ScienceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScienceVC.m; sourceTree = "<group>"; };
 		DB6C131B1F3AB757001088C4 /* ScienceVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScienceVC.xib; sourceTree = "<group>"; };
+		DB6C13201F3B19CD001088C4 /* AmuseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmuseVC.h; sourceTree = "<group>"; };
+		DB6C13211F3B19CE001088C4 /* AmuseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmuseVC.m; sourceTree = "<group>"; };
+		DB6C13221F3B19CE001088C4 /* AmuseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseVC.xib; sourceTree = "<group>"; };
 		DBB70E891F39C67100E29426 /* LLViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB70E8D1F39C67100E29426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBB70E8F1F39C67100E29426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +167,9 @@
 				DB6C13191F3AB757001088C4 /* ScienceVC.h */,
 				DB6C131A1F3AB757001088C4 /* ScienceVC.m */,
 				DB6C131B1F3AB757001088C4 /* ScienceVC.xib */,
+				DB6C13201F3B19CD001088C4 /* AmuseVC.h */,
+				DB6C13211F3B19CE001088C4 /* AmuseVC.m */,
+				DB6C13221F3B19CE001088C4 /* AmuseVC.xib */,
 				DBB70E951F39C67100E29426 /* Main.storyboard */,
 				DBB70E981F39C67100E29426 /* Assets.xcassets */,
 				DBB70E9A1F39C67100E29426 /* LaunchScreen.storyboard */,
@@ -312,6 +322,7 @@
 				DB6C13021F3AB636001088C4 /* NetVC.xib in Resources */,
 				DB6C13101F3AB6D3001088C4 /* VideoVC.xib in Resources */,
 				DB6C13171F3AB6E4001088C4 /* MusicVC.xib in Resources */,
+				DB6C13251F3B19CE001088C4 /* AmuseVC.xib in Resources */,
 				DB6C13091F3AB65D001088C4 /* HotPointVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +334,7 @@
 				DB6C13111F3AB6D3001088C4 /* VideoVC.xib in Resources */,
 				DB6C131F1F3AB757001088C4 /* ScienceVC.xib in Resources */,
 				DB6C13181F3AB6E4001088C4 /* MusicVC.xib in Resources */,
+				DB6C13261F3B19CE001088C4 /* AmuseVC.xib in Resources */,
 				DB6C13031F3AB636001088C4 /* NetVC.xib in Resources */,
 				DBB70EC51F39EF7000E29426 /* BaseViewController.xib in Resources */,
 				DB6C130A1F3AB65D001088C4 /* HotPointVC.xib in Resources */,
@@ -343,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C13231F3B19CE001088C4 /* AmuseVC.m in Sources */,
 				DB6C13151F3AB6E4001088C4 /* MusicVC.m in Sources */,
 				DB6C131C1F3AB757001088C4 /* ScienceVC.m in Sources */,
 				DB6C13071F3AB65D001088C4 /* HotPointVC.m in Sources */,
@@ -358,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C13241F3B19CE001088C4 /* AmuseVC.m in Sources */,
 				DB6C13161F3AB6E4001088C4 /* MusicVC.m in Sources */,
 				DB6C131D1F3AB757001088C4 /* ScienceVC.m in Sources */,
 				DB6C13011F3AB636001088C4 /* NetVC.m in Sources */,

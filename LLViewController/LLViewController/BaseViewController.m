@@ -12,6 +12,7 @@
 #import "VideoVC.h"
 #import "MusicVC.h"
 #import "ScienceVC.h"
+#import "AmuseVC.h"
 #define SCREENW [UIScreen mainScreen].bounds.size.width
 #define SCREENH [UIScreen mainScreen].bounds.size.height
 @interface BaseViewController ()<UIScrollViewDelegate>
@@ -25,8 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addContentVC];
-    [self showBaseUI];
-   
 }
 
 - (void)addContentVC {
@@ -40,20 +39,20 @@
     music.title = @"音乐";
     ScienceVC *science = [ScienceVC new];
     science.title = @"科学";
-    
+    AmuseVC *amuse = [AmuseVC new];
+    amuse.title = @"娱乐";
     [self addChildViewController:netVC];
     [self addChildViewController:hotPoint];
     [self addChildViewController:video];
     [self addChildViewController:music];
     [self addChildViewController:science];
-    
+    [self addChildViewController:amuse];
+    [self showBaseUI];
 }
 
 - (void)showBaseUI{
     _tittleScrollView.contentSize = CGSizeMake(100*self.childViewControllers.count, 0);
     _contentScrollView.contentSize = CGSizeMake(SCREENW*self.childViewControllers.count, 0);
-    _tittleScrollView.showsHorizontalScrollIndicator = NO;
-    _contentScrollView.showsHorizontalScrollIndicator = NO;
     for (int i = 0; i<self.childViewControllers.count; i++) {
         UIViewController *childVC = self.childViewControllers[i];
         childVC.view.frame = CGRectMake(i*SCREENW, 0, SCREENW, _contentScrollView.frame.size.height);
@@ -62,7 +61,6 @@
         if (i == 0) {
             titleBut.transform = CGAffineTransformMakeScale(1.3, 1.3);
             self.recordBut = titleBut;
-//            [self titleButtonAction:titleBut];
         }
         titleBut.center = CGPointMake(50 + 100*i,_tittleScrollView.frame.size.height/2);
         titleBut.bounds = CGRectMake(0, 0, 100, _tittleScrollView.frame.size.height);
@@ -84,14 +82,11 @@
         CGPoint tittlePoint = _tittleScrollView.contentOffset;
         tittlePoint = CGPointMake(_tittleScrollView.contentOffset.x+offSet, 0);
     [_tittleScrollView setContentOffset:tittlePoint animated:YES];
-//        _tittleScrollView.contentOffset = tittlePoint;
     }else if (sender.tag<=101){
         [_tittleScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     }else if (sender.tag>=100+self.childViewControllers.count-2){
         [_tittleScrollView setContentOffset:CGPointMake(self.childViewControllers.count*100-SCREENW, 0) animated:YES];
     }
-//    sender.transform = CGAffineTransformMakeScale(1.3, 1.3);
-    
     [_contentScrollView setContentOffset:CGPointMake((sender.tag-100)*SCREENW, 0) animated:YES] ;
     
 }
@@ -99,8 +94,7 @@
 
 #pragma mark -- ScrollViewDelegate 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    self.recordBut = [self.view viewWithTag:(NSInteger)scrollView.contentOffset.x/SCREENW +100];
-//    NSLog(@"scrollView = %f",fmod(scrollView.contentOffset.x, SCREENW));
+    _recordBut = [self.view viewWithTag:(NSInteger)scrollView.contentOffset.x/SCREENW +100];
     CGFloat centerScale = fabs((scrollView.contentOffset.x-SCREENW*(_recordBut.tag-100))/SCREENW);
     CGFloat bigScale =(centerScale)*0.3+1;
     CGFloat smallScale =(1-centerScale)*0.3+1;
@@ -113,11 +107,6 @@
         [self titleButtonAction:didScrollViewBut];
     }
 }
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-}
-
 
 
 @end
