@@ -7,31 +7,117 @@
 //
 
 #import "BaseViewController.h"
-
-@interface BaseViewController ()
-
+#import "NetVC.h"
+#import "HotPointVC.h"
+#import "VideoVC.h"
+#import "MusicVC.h"
+#import "ScienceVC.h"
+#define SCREENW [UIScreen mainScreen].bounds.size.width
+#define SCREENH [UIScreen mainScreen].bounds.size.height
+@interface BaseViewController ()<UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *tittleScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property(nonatomic,strong)UIButton *recordBut;
 @end
 
 @implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self addContentVC];
+    [self showBaseUI];
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)addContentVC {
+    NetVC *netVC = [NetVC new];
+    netVC.title = @"网络";
+    HotPointVC *hotPoint = [HotPointVC new];
+    hotPoint.title = @"热点";
+    VideoVC *video = [VideoVC new];
+    video.title = @"视频";
+    MusicVC *music = [MusicVC new];
+    music.title = @"音乐";
+    ScienceVC *science = [ScienceVC new];
+    science.title = @"科学";
+    
+    [self addChildViewController:netVC];
+    [self addChildViewController:hotPoint];
+    [self addChildViewController:video];
+    [self addChildViewController:music];
+    [self addChildViewController:science];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)showBaseUI{
+    _tittleScrollView.contentSize = CGSizeMake(100*self.childViewControllers.count, 0);
+    _contentScrollView.contentSize = CGSizeMake(SCREENW*self.childViewControllers.count, 0);
+    _tittleScrollView.showsHorizontalScrollIndicator = NO;
+    _contentScrollView.showsHorizontalScrollIndicator = NO;
+    for (int i = 0; i<self.childViewControllers.count; i++) {
+        UIViewController *childVC = self.childViewControllers[i];
+        childVC.view.frame = CGRectMake(i*SCREENW, 0, SCREENW, _contentScrollView.frame.size.height);
+        UIButton *titleBut = [UIButton buttonWithType:UIButtonTypeCustom];
+        titleBut.tag = i+100;
+        if (i == 0) {
+            titleBut.transform = CGAffineTransformMakeScale(1.3, 1.3);
+            self.recordBut = titleBut;
+//            [self titleButtonAction:titleBut];
+        }
+        titleBut.center = CGPointMake(50 + 100*i,_tittleScrollView.frame.size.height/2);
+        titleBut.bounds = CGRectMake(0, 0, 100, _tittleScrollView.frame.size.height);
+        [titleBut setTitle:childVC.title forState:UIControlStateNormal];
+        [titleBut setTitleColor:UIColor.redColor forState:UIControlStateNormal];
+        [titleBut addTarget:self action:@selector(titleButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_tittleScrollView addSubview:titleBut];
+        [_contentScrollView addSubview:childVC.view];
+    }
+   
+    
 }
-*/
+
+
+- (void)titleButtonAction:(UIButton*)sender {
+//    self.recordBut.transform = CGAffineTransformMakeScale(1, 1);
+    if ((sender.tag>101)&&(sender.tag<100+self.childViewControllers.count-2)) {
+        CGFloat offSet = sender.center.x -(_tittleScrollView.contentOffset.x+_tittleScrollView.center.x);
+        CGPoint tittlePoint = _tittleScrollView.contentOffset;
+        tittlePoint = CGPointMake(_tittleScrollView.contentOffset.x+offSet, 0);
+    [_tittleScrollView setContentOffset:tittlePoint animated:YES];
+//        _tittleScrollView.contentOffset = tittlePoint;
+    }else if (sender.tag<=101){
+        [_tittleScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }else if (sender.tag>=100+self.childViewControllers.count-2){
+        [_tittleScrollView setContentOffset:CGPointMake(self.childViewControllers.count*100-SCREENW, 0) animated:YES];
+    }
+//    sender.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    
+    [_contentScrollView setContentOffset:CGPointMake((sender.tag-100)*SCREENW, 0) animated:YES] ;
+    
+}
+
+
+#pragma mark -- ScrollViewDelegate 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.recordBut = [self.view viewWithTag:(NSInteger)scrollView.contentOffset.x/SCREENW +100];
+//    NSLog(@"scrollView = %f",fmod(scrollView.contentOffset.x, SCREENW));
+    CGFloat centerScale = fabs((scrollView.contentOffset.x-SCREENW*(_recordBut.tag-100))/SCREENW);
+    CGFloat bigScale =(centerScale)*0.3+1;
+    CGFloat smallScale =(1-centerScale)*0.3+1;
+    NSInteger nextNum =  (scrollView.contentOffset.x-SCREENW*(_recordBut.tag-100))>0?_recordBut.tag+1:_recordBut.tag-1;
+    UIButton *nextBut =[self.view viewWithTag:nextNum];
+    _recordBut.transform = CGAffineTransformMakeScale(smallScale, smallScale);
+    nextBut.transform = CGAffineTransformMakeScale(bigScale, bigScale);
+    if (fmodf(scrollView.contentOffset.x, SCREENW)==0) {
+        UIButton *didScrollViewBut = [self.view viewWithTag:scrollView.contentOffset.x/SCREENW+100];
+        [self titleButtonAction:didScrollViewBut];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+}
+
+
 
 @end

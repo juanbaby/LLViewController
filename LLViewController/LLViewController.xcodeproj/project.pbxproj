@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB6C13001F3AB636001088C4 /* NetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C12FE1F3AB636001088C4 /* NetVC.m */; };
+		DB6C13011F3AB636001088C4 /* NetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C12FE1F3AB636001088C4 /* NetVC.m */; };
+		DB6C13021F3AB636001088C4 /* NetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C12FF1F3AB636001088C4 /* NetVC.xib */; };
+		DB6C13031F3AB636001088C4 /* NetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C12FF1F3AB636001088C4 /* NetVC.xib */; };
+		DB6C13071F3AB65D001088C4 /* HotPointVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C13051F3AB65D001088C4 /* HotPointVC.m */; };
+		DB6C13081F3AB65D001088C4 /* HotPointVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C13051F3AB65D001088C4 /* HotPointVC.m */; };
+		DB6C13091F3AB65D001088C4 /* HotPointVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C13061F3AB65D001088C4 /* HotPointVC.xib */; };
+		DB6C130A1F3AB65D001088C4 /* HotPointVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C13061F3AB65D001088C4 /* HotPointVC.xib */; };
+		DB6C130E1F3AB6D3001088C4 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C130C1F3AB6D3001088C4 /* VideoVC.m */; };
+		DB6C130F1F3AB6D3001088C4 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C130C1F3AB6D3001088C4 /* VideoVC.m */; };
+		DB6C13101F3AB6D3001088C4 /* VideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C130D1F3AB6D3001088C4 /* VideoVC.xib */; };
+		DB6C13111F3AB6D3001088C4 /* VideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C130D1F3AB6D3001088C4 /* VideoVC.xib */; };
+		DB6C13151F3AB6E4001088C4 /* MusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C13131F3AB6E4001088C4 /* MusicVC.m */; };
+		DB6C13161F3AB6E4001088C4 /* MusicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C13131F3AB6E4001088C4 /* MusicVC.m */; };
+		DB6C13171F3AB6E4001088C4 /* MusicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C13141F3AB6E4001088C4 /* MusicVC.xib */; };
+		DB6C13181F3AB6E4001088C4 /* MusicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C13141F3AB6E4001088C4 /* MusicVC.xib */; };
+		DB6C131C1F3AB757001088C4 /* ScienceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C131A1F3AB757001088C4 /* ScienceVC.m */; };
+		DB6C131D1F3AB757001088C4 /* ScienceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6C131A1F3AB757001088C4 /* ScienceVC.m */; };
+		DB6C131E1F3AB757001088C4 /* ScienceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C131B1F3AB757001088C4 /* ScienceVC.xib */; };
+		DB6C131F1F3AB757001088C4 /* ScienceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C131B1F3AB757001088C4 /* ScienceVC.xib */; };
 		DBB70E8E1F39C67100E29426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB70E8D1F39C67100E29426 /* main.m */; };
 		DBB70E911F39C67100E29426 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB70E901F39C67100E29426 /* AppDelegate.m */; };
 		DBB70E971F39C67100E29426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB70E951F39C67100E29426 /* Main.storyboard */; };
@@ -38,6 +58,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB6C12FD1F3AB636001088C4 /* NetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetVC.h; sourceTree = "<group>"; };
+		DB6C12FE1F3AB636001088C4 /* NetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetVC.m; sourceTree = "<group>"; };
+		DB6C12FF1F3AB636001088C4 /* NetVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetVC.xib; sourceTree = "<group>"; };
+		DB6C13041F3AB65D001088C4 /* HotPointVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPointVC.h; sourceTree = "<group>"; };
+		DB6C13051F3AB65D001088C4 /* HotPointVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPointVC.m; sourceTree = "<group>"; };
+		DB6C13061F3AB65D001088C4 /* HotPointVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotPointVC.xib; sourceTree = "<group>"; };
+		DB6C130B1F3AB6D3001088C4 /* VideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		DB6C130C1F3AB6D3001088C4 /* VideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		DB6C130D1F3AB6D3001088C4 /* VideoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoVC.xib; sourceTree = "<group>"; };
+		DB6C13121F3AB6E4001088C4 /* MusicVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicVC.h; sourceTree = "<group>"; };
+		DB6C13131F3AB6E4001088C4 /* MusicVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicVC.m; sourceTree = "<group>"; };
+		DB6C13141F3AB6E4001088C4 /* MusicVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicVC.xib; sourceTree = "<group>"; };
+		DB6C13191F3AB757001088C4 /* ScienceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScienceVC.h; sourceTree = "<group>"; };
+		DB6C131A1F3AB757001088C4 /* ScienceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScienceVC.m; sourceTree = "<group>"; };
+		DB6C131B1F3AB757001088C4 /* ScienceVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScienceVC.xib; sourceTree = "<group>"; };
 		DBB70E891F39C67100E29426 /* LLViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB70E8D1F39C67100E29426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBB70E8F1F39C67100E29426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +145,21 @@
 				DBB70EBF1F39EF7000E29426 /* BaseViewController.h */,
 				DBB70EC01F39EF7000E29426 /* BaseViewController.m */,
 				DBB70EC11F39EF7000E29426 /* BaseViewController.xib */,
+				DB6C12FD1F3AB636001088C4 /* NetVC.h */,
+				DB6C12FE1F3AB636001088C4 /* NetVC.m */,
+				DB6C12FF1F3AB636001088C4 /* NetVC.xib */,
+				DB6C13041F3AB65D001088C4 /* HotPointVC.h */,
+				DB6C13051F3AB65D001088C4 /* HotPointVC.m */,
+				DB6C13061F3AB65D001088C4 /* HotPointVC.xib */,
+				DB6C130B1F3AB6D3001088C4 /* VideoVC.h */,
+				DB6C130C1F3AB6D3001088C4 /* VideoVC.m */,
+				DB6C130D1F3AB6D3001088C4 /* VideoVC.xib */,
+				DB6C13121F3AB6E4001088C4 /* MusicVC.h */,
+				DB6C13131F3AB6E4001088C4 /* MusicVC.m */,
+				DB6C13141F3AB6E4001088C4 /* MusicVC.xib */,
+				DB6C13191F3AB757001088C4 /* ScienceVC.h */,
+				DB6C131A1F3AB757001088C4 /* ScienceVC.m */,
+				DB6C131B1F3AB757001088C4 /* ScienceVC.xib */,
 				DBB70E951F39C67100E29426 /* Main.storyboard */,
 				DBB70E981F39C67100E29426 /* Assets.xcassets */,
 				DBB70E9A1F39C67100E29426 /* LaunchScreen.storyboard */,
@@ -258,6 +308,11 @@
 				DBB70EC41F39EF7000E29426 /* BaseViewController.xib in Resources */,
 				DBB70E991F39C67100E29426 /* Assets.xcassets in Resources */,
 				DBB70E971F39C67100E29426 /* Main.storyboard in Resources */,
+				DB6C131E1F3AB757001088C4 /* ScienceVC.xib in Resources */,
+				DB6C13021F3AB636001088C4 /* NetVC.xib in Resources */,
+				DB6C13101F3AB6D3001088C4 /* VideoVC.xib in Resources */,
+				DB6C13171F3AB6E4001088C4 /* MusicVC.xib in Resources */,
+				DB6C13091F3AB65D001088C4 /* HotPointVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +320,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C13111F3AB6D3001088C4 /* VideoVC.xib in Resources */,
+				DB6C131F1F3AB757001088C4 /* ScienceVC.xib in Resources */,
+				DB6C13181F3AB6E4001088C4 /* MusicVC.xib in Resources */,
+				DB6C13031F3AB636001088C4 /* NetVC.xib in Resources */,
 				DBB70EC51F39EF7000E29426 /* BaseViewController.xib in Resources */,
+				DB6C130A1F3AB65D001088C4 /* HotPointVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C13151F3AB6E4001088C4 /* MusicVC.m in Sources */,
+				DB6C131C1F3AB757001088C4 /* ScienceVC.m in Sources */,
+				DB6C13071F3AB65D001088C4 /* HotPointVC.m in Sources */,
 				DBB70E911F39C67100E29426 /* AppDelegate.m in Sources */,
+				DB6C130E1F3AB6D3001088C4 /* VideoVC.m in Sources */,
 				DBB70EC21F39EF7000E29426 /* BaseViewController.m in Sources */,
+				DB6C13001F3AB636001088C4 /* NetVC.m in Sources */,
 				DBB70E8E1F39C67100E29426 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C13161F3AB6E4001088C4 /* MusicVC.m in Sources */,
+				DB6C131D1F3AB757001088C4 /* ScienceVC.m in Sources */,
+				DB6C13011F3AB636001088C4 /* NetVC.m in Sources */,
+				DB6C13081F3AB65D001088C4 /* HotPointVC.m in Sources */,
 				DBB70EA71F39C67100E29426 /* LLViewControllerTests.m in Sources */,
 				DBB70EC31F39EF7000E29426 /* BaseViewController.m in Sources */,
+				DB6C130F1F3AB6D3001088C4 /* VideoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +596,7 @@
 				DBB70EB81F39C67100E29426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBB70EB91F39C67100E29426 /* Build configuration list for PBXNativeTarget "LLViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +605,7 @@
 				DBB70EBB1F39C67100E29426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBB70EBC1F39C67100E29426 /* Build configuration list for PBXNativeTarget "LLViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +614,7 @@
 				DBB70EBE1F39C67100E29426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
