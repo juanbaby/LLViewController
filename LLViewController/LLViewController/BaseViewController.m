@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self addContentVC];
 }
 
@@ -41,6 +43,8 @@
     science.title = @"科学";
     AmuseVC *amuse = [AmuseVC new];
     amuse.title = @"娱乐";
+    
+    
     [self addChildViewController:netVC];
     [self addChildViewController:hotPoint];
     [self addChildViewController:video];
@@ -67,6 +71,7 @@
         [titleBut setTitle:childVC.title forState:UIControlStateNormal];
         [titleBut setTitleColor:UIColor.redColor forState:UIControlStateNormal];
         [titleBut addTarget:self action:@selector(titleButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        titleBut.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.f green:arc4random_uniform(255)/255.f blue:arc4random_uniform(255)/255.f alpha:1];
         [_tittleScrollView addSubview:titleBut];
         [_contentScrollView addSubview:childVC.view];
     }
@@ -76,6 +81,7 @@
 
 
 - (void)titleButtonAction:(UIButton*)sender {
+    NSLog(@"点击了tag = %ld的button",sender.tag);
 //    self.recordBut.transform = CGAffineTransformMakeScale(1, 1);
     if ((sender.tag>101)&&(sender.tag<100+self.childViewControllers.count-2)) {
         CGFloat offSet = sender.center.x -(_tittleScrollView.contentOffset.x+_tittleScrollView.center.x);
@@ -83,7 +89,7 @@
         tittlePoint = CGPointMake(_tittleScrollView.contentOffset.x+offSet, 0);
     [_tittleScrollView setContentOffset:tittlePoint animated:YES];
     }else if (sender.tag<=101){
-        [_tittleScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+        [_tittleScrollView setContentOffset:CGPointMake(0,0) animated:YES];
     }else if (sender.tag>=100+self.childViewControllers.count-2){
         [_tittleScrollView setContentOffset:CGPointMake(self.childViewControllers.count*100-SCREENW, 0) animated:YES];
     }
